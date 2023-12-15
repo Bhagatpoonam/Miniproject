@@ -70,8 +70,8 @@
 
         <div class="content">
             <div class="d-grid gap-1 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -85,8 +85,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Mechanics</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mechanics</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -100,8 +100,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Mathematics-I</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mathematics-I</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -115,8 +115,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Graphics</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Graphics</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -130,8 +130,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Basics Electronics Engineering</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Basics Electronics Engineering</b></button>
+                <div id="moreInfo" class="hidden-divison"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -143,15 +143,25 @@
             </div>
         </div>
 
+
 <script>
-    document.getElementById('showInfoBtn').addEventListener('click', function() {
-  var moreInfoDiv = document.getElementById('moreInfo');
-  if (moreInfoDiv.classList.contains('hidden')) {
-    moreInfoDiv.classList.remove('hidden');
-  } else {
-    moreInfoDiv.classList.add('hidden');
-  }
+  document.addEventListener('DOMContentLoaded', function() {
+const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+toggleButtons.forEach(function(button) {
+button.addEventListener('click', function() {
+const hiddenDivision = this.nextElementSibling;
+
+// Toggle the display of the hidden division
+if (hiddenDivision.style.display === 'none') {
+  hiddenDivision.style.display = 'block';
+} else {
+  hiddenDivision.style.display = 'none';
+}
 });
+});
+});
+
 </script>
 
 <footer class="footer sticky-bottom bg-body-secondary">
