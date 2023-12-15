@@ -11,49 +11,49 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <style>
       .footer {
-  background-color: #f0f0f0;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+       background-color: #f0f0f0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     }
 
-.whatsapp-logo img {
-  width: 40px;
-  height: 40px;
-}
-.whatsapp-logo{
-  height: 40px;
-  width:40px;
-  border-radius: 20px;
-  margin-right: 20px;
-}
-.button {
-  padding: 2px 2px;
-  background-color: #333;
-  color: white;
-  margin:20px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
+     .whatsapp-logo img {
+       width: 40px;
+       height: 40px;
+      }
+    .whatsapp-logo{
+      height: 40px;
+      width:40px;
+      border-radius: 20px;
+      margin-right: 20px;
+    }
+    .button {
+      padding: 2px 2px;
+      background-color: #333;
+      color: white;
+      margin:20px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
 
-.hidden {
-  display: none;
-}
+     .hidden {
+       display: none;
+    }
 
-.items {
-    margin:0;
-    width: 200px;
-    height: 190px;
-    background-color: white;
-    border: 2.5px solid black;
-    border-radius: 12px;
-    text-decoration: none;
-    display: flex;
+     .items {
+      margin:0;
+      width: 200px;
+      height: 190px;
+      background-color: white;
+      border: 2.5px solid black;
+      border-radius: 12px;
+      text-decoration: none;
+      display: flex;
   }
-  .content{
+     .content{
     margin-top: 25px;
     margin-left: 0%;
     margin-right: 0%;
@@ -68,11 +68,10 @@
     </div>
 </nav>
 
-
         <div class="content">
             <div class="d-grid gap-1 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -86,8 +85,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Mechanics</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mechanics</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -101,8 +100,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Mathematics-I</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mathematics-I</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -116,8 +115,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Engineering Graphics</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Graphics</b></button>
+                <div id="moreInfo" class="hidden-division"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -131,8 +130,8 @@
         
         <div class="content">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" id="showInfoBtn"><b>Basics Electronics Engineering</b></button>
-                <div id="moreInfo" class="hidden"> 
+                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Basics Electronics Engineering</b></button>
+                <div id="moreInfo" class="hidden-divison"> 
                     <div class="card text-center">
                         <div class="card-body text-center">
                             <p class="card-text"><b>(Pattern 2019)</b></p>
@@ -143,22 +142,28 @@
                  </div>
             </div>
         </div>
-        
-    
-  
 
 
 <script>
-    document.getElementById('showInfoBtn').addEventListener('click', function() {
-  var moreInfoDiv = document.getElementById('moreInfo');
-  if (moreInfoDiv.classList.contains('hidden')) {
-    moreInfoDiv.classList.remove('hidden');
-  } else {
-    moreInfoDiv.classList.add('hidden');
-  }
-});
-</script>
+  document.addEventListener('DOMContentLoaded', function() {
+const toggleButtons = document.querySelectorAll('.toggle-btn');
 
+toggleButtons.forEach(function(button) {
+button.addEventListener('click', function() {
+const hiddenDivision = this.nextElementSibling;
+
+// Toggle the display of the hidden division
+if (hiddenDivision.style.display === 'none') {
+  hiddenDivision.style.display = 'none';
+} else {
+  hiddenDivision.style.display = 'none';
+}
+});
+});
+});
+
+</script>
+</br></br></br></br></br>
 <footer class="footer sticky-bottom bg-body-secondary">
     <p>© 2023 Your Website</p>
     <div class="whatsapp-logo" >
@@ -166,8 +171,9 @@
         <img src="/Images/whatsapp (1).png" alt="WhatsApp" style="height:50px; width:50px;" >
       </a>
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
   crossorigin="anonymous">
 </script>
