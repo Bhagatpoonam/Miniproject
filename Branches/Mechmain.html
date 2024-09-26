@@ -9,26 +9,28 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <style>
-      .footer {
-  background-color: #f0f0f0;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.whatsapp-logo img {
-  width: 40px;
-  height: 40px;
-}
-.whatsapp-logo{
-  height: 40px;
-  width:40px;
-  border-radius: 20px;
-  margin-right: 20px;
-}
+  <style>
 
+    .footer {
+     background-color: #f0f0f0;
+     padding: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+
+     .whatsapp-logo img {
+     width: 40px;
+     height: 40px;
+    }
+
+    .whatsapp-logo {
+     height: 40px;
+     width:40px;
+     border-radius: 20px;
+     margin-right: 20px;
+    }
 
     form {
       max-width: 400px;
@@ -60,17 +62,19 @@
     button:hover {
       background-color: #555;
     }
-    .card{
+
+    .card {
         margin: auto;
     }
 
-    </style>
+  </style>
 </head>
 <body>
   <nav class="navbar sticky-top bg-body-secondary">
     <div class="container-fluid">
-      <!-- <a class="navbar-brand black text-bold" href="#">QuestionPaper</a> -->
+      <a href="index.html"> <img src="/Images/back.png" style="max-height: 50px;"></a>
       <h1><b>QUESTION PAPER</b></h1>
+      <a href="index.html"> <img src="/Images/home.png" style="max-height: 50px;"></a>
     </div>
 </nav>
 
@@ -78,8 +82,8 @@
 <div class="card text-center" style="width: 25rem;">
     <div class="card-body text-center">
         <div class="card-header">
-            <b>First Year Engineering(SPPU University)</b>
-          </div>
+            <b>Mechanical Engineering(SPPU University)</b>
+        </div>
         
           <form id="redirectForm">
             <b>Solved Previous Year Question Papers</b></br>
@@ -98,11 +102,6 @@
             </select>
             <button type="button" onclick="redirectSelectedOption()">Search</button>
           </form>
-
-
-
-
-
     </div>
   </div>
 

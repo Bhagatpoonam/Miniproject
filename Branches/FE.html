@@ -58,185 +58,457 @@
     margin-left: 0%;
     margin-right: 0%;
   }
+  .cardA{
+    text-align: center;
+    align-items: center;
+  }
+  .Affiliate-product-table .Affiliate-btn-red a {
+      background: purple;
+      text-transform: capitalize;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 15px;
+      display: block;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .Affiliate-product-table .Affiliate-btn-red a:hover {
+      background: #195D93;
+      transition: 0.3s;
+    }
+    
+    /* Affiliate Product Box */
+    .Affiliate-product-table {
+      margin: 30px 0;
+    }
+    .Affiliate-product-table thead {
+      background:#3498DB;
+      color: #fff;
+    }
+    .Affiliate-product-table,
+    .Affiliate-product-table td,
+    .Affiliate-product-table th {
+      border: none;
+      box-sizing: border-box;
+    }
+    .Affiliate-product-table thead th {
+      font-weight: 300;
+      font-size: 17px;
+      padding: 10px;
+      margin: 0;
+    }
+    .Affiliate-product-table tr {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center;
+      transition: 0.3s;
+    }
+    .Affiliate-product-table tbody tr:hover {
+      transform: scale(1.02);
+      transition: 0.3s;
+      box-shadow: 0 0 20px -4px rgba(0, 0, 0, 0.15);
+    }
+    .Affiliate-product-table tbody tr {
+      border: 2px solid #e1e1e1;
+      margin-bottom: 5px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .Affiliate-product-table tr td:first-child,
+    .Affiliate-product-table tr th:first-child {
+      width: 25%;
+    }
+    .Affiliate-product-table tr td:nth-child(2),
+    .Affiliate-product-table tr th:nth-child(2) {
+      width: 25%;
+    }
+    .Affiliate-product-table tr td:nth-child(3),
+    .Affiliate-product-table tr th:nth-child(3) {
+      width: 30%;
+    }
+    .Affiliate-product-table tr td:last-child,
+    .Affiliate-product-table tr th:last-child {
+      width: 20%;
+    }
+    .Affiliate-product-table .Affiliate-image {
+      position: relative;
+    }
+    .Affiliate-product-table .p_tag {
+      position: absolute;
+      left: -10px;
+      top: 0;
+      background: #5898ff;
+      padding: 5px 5px;
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .Affiliate-product-table .p_tag::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: -10px;
+      bottom: -7px;
+      border-color: rgba(0, 0, 0, 0) #133091 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+      border-style: inset solid inset inset;
+      border-width: 0 10px 7px;
+    }
+    
+    .Affiliate-product-table .p-img {
+      width: 90%;
+      max-height: 140px;
+      margin: 0 auto;
+      display: block;
+      height: auto;
+      object-fit: contain;
+    }
+    .Affiliate-product-table .Affiliate-product .p_title {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.2;
+      text-decoration: none;
+      color: #4b77b7;
+    }
+    .Affiliate-product-table .Affiliate-btn a {
+      background: #3498DB;
+      text-transform: capitalize;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 15px;
+      display: block;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .Affiliate-product-table .Affiliate-btn a:hover {
+      background: #195D93;
+      transition: 0.3s;
+    }
+    .Affiliate-product-table .Affiliate-feature {
+      font-size: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
+    }
+    @media only screen and (max-width: 768px) {
+      .Affiliate-product-table .p_tag {
+        position: absolute;
+        left: -20px;
+      }
+      .Affiliate-product-table tbody tr {
+        padding: 10px;
+      }
+      .Affiliate-product-table tr td:first-child {
+        width: 40%;
+      }
+      .Affiliate-product-table tr td:nth-child(2) {
+        width: 60%;
+      }
+      .Affiliate-product-table tr td:nth-child(3),
+      .Affiliate-product-table tr th:nth-child(3) {
+        width: 100%;
+      }
+      .Affiliate-product-table tr td:last-child,
+      .Affiliate-product-table tr th:last-child {
+        width: 100%;
+      }
+      .Affiliate-product-table .Affiliate-btn a {
+        margin-top: 20px;
+      }
+      .Affiliate-product-table tr th:nth-child(2) {
+        width: 100%;
+      }
+      .Affiliate-product-table tr th:first-child,
+      .Affiliate-product-table tr th:nth-child(3),
+      .Affiliate-product-table tr th:last-child {
+        display: none;
+      }
+    }
     </style>
 </head>
 <body>
   <nav class="navbar sticky-top bg-body-secondary">
     <div class="container-fluid">
-      <!-- <a class="navbar-brand black text-bold" href="#">QuestionPaper</a> -->
+      <a href="index.html"> <img src="/Images/back.png" style="max-height: 50px;"></a>
       <h1><b>QUESTION PAPER</b></h1>
+      <a href="index.html"> <img src="/Images/home.png" style="max-height: 50px;"></a>
     </div>
 </nav>
 
-        <div class="content">
-            <div class="d-grid gap-1 col-6 mx-auto">
-                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-                <div id="moreInfo" class="hidden-division"> 
-                    <div class="card text-center">
-                        <div class="card-body text-center">
-                            <p class="card-text"><b>(Pattern 2019)</b></p>
-                            <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                            <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-        
-        <div class="content">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mechanics</b></button>
-                <div id="moreInfo" class="hidden-division"> 
-                    <div class="card text-center">
-                        <div class="card-body text-center">
-                            <p class="card-text"><b>(Pattern 2019)</b></p>
-                            <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                            <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-        
-        <div class="content">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mathematics-I</b></button>
-                <div id="moreInfo" class="hidden-division"> 
-                    <div class="card text-center">
-                        <div class="card-body text-center">
-                            <p class="card-text"><b>(Pattern 2019)</b></p>
-                            <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                            <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-        
-        <div class="content">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Graphics</b></button>
-                <div id="moreInfo" class="hidden-division"> 
-                    <div class="card text-center">
-                        <div class="card-body text-center">
-                            <p class="card-text"><b>(Pattern 2019)</b></p>
-                            <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                            <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-        
-        <div class="content">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Basics Electronics Engineering</b></button>
-                <div id="moreInfo" class="hidden-divison"> 
-                    <div class="card text-center">
-                        <div class="card-body text-center">
-                            <p class="card-text"><b>(Pattern 2019)</b></p>
-                            <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                            <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
 
-        <div class="content">
-          <div class="d-grid gap-1 col-6 mx-auto">
-              <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-              <div id="moreInfo" class="hidden-division"> 
-                  <div class="card text-center">
-                      <div class="card-body text-center">
-                          <p class="card-text"><b>(Pattern 2019)</b></p>
-                          <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                          <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                      </div>
-                  </div>
-               </div>
-          </div>
-      </div>
-
-      <div class="content">
-        <div class="d-grid gap-1 col-6 mx-auto">
-            <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-            <div id="moreInfo" class="hidden-division"> 
-                <div class="card text-center">
-                    <div class="card-body text-center">
-                        <p class="card-text"><b>(Pattern 2019)</b></p>
-                        <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                        <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                    </div>
-                </div>
-             </div>
-        </div>
-    </div>
-
-    <div class="content">
-      <div class="d-grid gap-1 col-6 mx-auto">
-          <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-          <div id="moreInfo" class="hidden-division"> 
-              <div class="card text-center">
-                  <div class="card-body text-center">
-                      <p class="card-text"><b>(Pattern 2019)</b></p>
-                      <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                      <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                  </div>
-              </div>
-           </div>
-      </div>
-  </div>
-
-  <div class="content">
-    <div class="d-grid gap-1 col-6 mx-auto">
-        <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-        <div id="moreInfo" class="hidden-division"> 
-            <div class="card text-center">
-                <div class="card-body text-center">
-                    <p class="card-text"><b>(Pattern 2019)</b></p>
-                    <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                    <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-                </div>
-            </div>
-         </div>
-    </div>
-</div>
 
 <div class="content">
-  <div class="d-grid gap-1 col-6 mx-auto">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
       <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Physics</b></button>
-      <div id="moreInfo" class="hidden-division"> 
-          <div class="card text-center">
-              <div class="card-body text-center">
-                  <p class="card-text"><b>(Pattern 2019)</b></p>
-                  <p class="card-text"><b>Mar-Apr(2023)</b></p>
-                  <a href="/QuestionPaper/Engineering Physics 1.pdf" download class="btn btn-secondary">Download PDF</a>
-              </div>
-          </div>
-       </div>
+    </div>
   </div>
-</div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/phy2.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/phy2.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
 
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Graphics</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/eg.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/eg.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mechanics</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/mechanics.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/mechanics.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mathematics-I</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/m1.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/m1.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Mathematics-II</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/m2.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/m2.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Engineering Chemistry</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/chem.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/chem.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Basics Electrical Engineering</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/ele.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/ele.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Basics Electronics Engineering</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/electronics.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/electronics.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Programming & Problem Solving</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/pps.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/pps.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
+
+ <div class="content">
+  <div class="question" onclick="toggleAnswer(this)">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <button class="btn btn-secondary toggle-btn" type="button" id="showInfoBtn"><b>Systems in Mechanical Engineering</b></button>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <div id="content1" class="content" style="display: block;">
+        <table class="Affiliate-product-table">
+            <tbody><tr><td class="Affiliate-image">
+                <a href="#" rel="nofollow" target="_blank">
+                    <img class="p-img" src="/Images/img1.png"></a>
+                        </td><td class="Affiliate-product"><a href="/First Year/sme.html" rel="nofollow" target="_blank">
+                            <div class="p_title"> Nov-Dec2019 <br>
+                            </div></a>
+                        </td><td class="Affiliate-feature"><br>
+                                "Complete PYQ Solutions: Ace exams with accurate, solved answers!"
+                        </td><td class="Affiliate-btn" id="unavailable"><a href="/First Year/sme.html" rel="nofollow" target="_blank"> <strong>View PDF</strong> </a>
+                        </td></tr>
+                    </tbody>
+        </table>
+   </div>
+  </div>
+ </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-const toggleButtons = document.querySelectorAll('.toggle-btn');
-
-toggleButtons.forEach(function(button) {
-button.addEventListener('click', function() {
-const hiddenDivision = this.nextElementSibling;
-
-// Toggle the display of the hidden division
-if (hiddenDivision.style.display === 'none') {
-  hiddenDivision.style.display = 'none';
-} else {
-  hiddenDivision.style.display = 'none';
-}
-});
-});
-});
-
+  function toggleAnswer(question) {
+    var answer = question.nextElementSibling;
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      answer.style.display = "block";
+    }
+  }
 </script>
 </br></br></br></br></br>
 <footer class="footer sticky-bottom bg-body-secondary">
